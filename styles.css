@@ -121,6 +121,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .nav { display: flex; }
   .menu-toggle, .menu-mobile { display: none !important; }
 }
+@media (min-width: 960px) and (max-width: 1120px) {
+  .nav { gap: 1.05rem; }
+  .nav a { font-size: 0.8rem; }
+}
 
 .hero {
   position: relative;
@@ -289,6 +293,39 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .quote-inner cite {
   font-style: normal; font-size: 0.76rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose);
+}
+
+.therapy { background: var(--cream); }
+.therapy-grid {
+  display: grid; gap: 1rem;
+}
+@media (min-width: 720px) {
+  .therapy-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+}
+@media (min-width: 1000px) {
+  .therapy-grid { grid-template-columns: repeat(6, 1fr); }
+  .therapy-card { grid-column: span 2; }
+  .therapy-card:nth-child(4) { grid-column: 2 / span 2; }
+  .therapy-card:nth-child(5) { grid-column: 4 / span 2; }
+}
+.therapy-card {
+  padding: 1.7rem 1.5rem 1.55rem;
+  background: var(--ivory);
+  border-top: 2px solid var(--forest);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.therapy-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(42, 58, 44, 0.08);
+}
+.therapy-card h3 {
+  margin: 0 0 0.5rem; font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 500;
+}
+.therapy-card p { margin: 0; color: var(--muted); font-size: 0.96rem; }
+.therapy-actions { margin-top: 2.2rem; }
+@media (max-width: 719px) {
+  .therapy-actions .btn { width: 100%; }
 }
 
 .about {
@@ -482,5 +519,5 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .btn:hover, .identify-card:hover, .wa-float:hover { transform: none; }
+  .btn:hover, .identify-card:hover, .therapy-card:hover, .wa-float:hover { transform: none; }
 }
