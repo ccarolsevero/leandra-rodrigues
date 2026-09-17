@@ -87,8 +87,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .nav a {
   position: relative;
   font-size: 0.86rem; font-weight: 500; color: var(--forest);
-  padding-bottom: 0.22rem;
   transition: color 0.35s var(--ease);
+}
+.nav a:not(.nav-cta) {
+  padding-bottom: 0.22rem;
 }
 .nav a:not(.nav-cta)::after {
   content: "";
@@ -110,11 +112,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .nav a:not(.nav-cta):focus-visible::after {
   transform: scaleX(1);
 }
-.nav-cta {
-  padding: 0.55rem 1.05rem; border-radius: 999px;
-  background: var(--forest); color: var(--ivory) !important;
+.nav a.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.35rem;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  background: var(--forest);
+  color: var(--ivory) !important;
+  line-height: 1;
 }
-.nav-cta:hover { background: var(--forest-deep); color: var(--ivory) !important; }
+.nav a.nav-cta:hover { background: var(--forest-deep); color: var(--ivory) !important; }
 
 .menu-toggle {
   display: flex; flex-direction: column; justify-content: center;
