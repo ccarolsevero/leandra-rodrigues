@@ -345,8 +345,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   background: var(--cream); box-shadow: var(--shadow);
 }
 .about-portrait img {
-  width: 118%; max-width: none; margin-left: -9%;
-  aspect-ratio: 4 / 5; object-fit: cover; object-position: center 10%;
+  width: 100%; max-width: none;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: center 18%;
 }
 .about-text { margin: 0 0 1rem; color: var(--muted); }
 .about-meta {
