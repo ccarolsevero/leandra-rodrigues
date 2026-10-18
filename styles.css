@@ -70,8 +70,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 .brand { display: flex; align-items: center; gap: 0.75rem; }
 .brand img {
-  width: 48px; height: 48px; object-fit: cover;
-  border-radius: 12px; box-shadow: 0 4px 16px rgba(30, 69, 56, 0.12);
+  width: 58px; height: 58px; object-fit: contain;
+  background: transparent;
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-name {
@@ -527,7 +527,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .footer-inner { max-width: 640px; margin: 0 auto; }
 .footer-logo {
-  width: 72px; height: 72px; margin: 0 auto 1rem; border-radius: 16px; object-fit: cover;
+  width: 96px; height: 96px; margin: 0 auto 1rem; object-fit: contain;
+  border-radius: 50%; background: var(--ivory); padding: 8px; box-sizing: border-box;
 }
 .footer-name {
   margin: 0 0 0.3rem; font-family: var(--font-display);
